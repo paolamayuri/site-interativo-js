@@ -1,0 +1,263 @@
+
+*{ /* página inteira */
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;  /* dos 100%, vamos usar so dos 16 pixels */
+}
+
+/* corpo da página */
+body{
+    background-color: #F5F5F5;
+}
+
+/* cabeçalho da página com fixed */
+header{
+    background-color:#6495ED;
+    color: #fff;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%; /* sera 100% do que a tela tem p oferecer, diferente de usar px */
+    position: fixed; /*serve p ficar, qnd rolar a tela, ficara o elemento fixo*/
+    text-shadow: 1px 1px 1px #000; 
+    z-index: 1; /* item n sobrepoe no site */
+
+}
+
+/* <p> da página */ 
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2rem;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 3%;
+    padding-top: 10px;
+    font-size: 2rem;
+    color: #6495ED;
+    text-shadow: 1px 1px 1px #000;
+}
+
+h3{
+    font-size: 1.9rem;        /* rem é medida relativa, 19 pixels */ 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 5px;
+}
+
+h4{
+    font-size: 1rem;        
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding-left: 5px;  /* p alinhar a esquerda */
+    padding-bottom: 5px;
+}
+
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 1px;   /* separaçao de 1 pixel */
+    font-size: 1.9rem;
+}
+
+button{      /* botão comprar */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 6px;
+    font-size: 1.8rem;
+    background-color: #6495ED;  /* cor do fundo do botão */
+    color: #fff;                 /* cor da letra dentro */
+    border: solid;          /* borda no botao comprar*/ 
+    margin-left: 3%;
+    border: solid #000;
+    border-radius: 10px;
+}
+
+/* coluna personalizada */
+.container{
+    display: block;
+    background-color: #fff;
+    width: 95%; /* é 95% do que a tela tem p oferecer, diferente de usar px */
+    box-shadow: 2px 2px #808080;
+    /* margin-top: auto;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-bottom: 0px; 
+    OU     */
+    margin: 0 auto;   /* auto é refente as margens laterais */
+    max-width: 90%; /* momento q atinge 90% com a pagina minimizada, acompanha, responsividade o nome disso */
+    max-height: 90%;
+    min-width: 0;
+    min-height: 0;
+    margin-top: 40px;
+}
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: #6495ED;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 1px #000;   /* coloquei efeito de sombra */
+}
+
+.texto-footer{
+    text-align: center;
+    font-size: 1.6rem;        
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.compre{
+    background-color: rgba(255, 255, 0, 1.0);
+    width: 150px;
+    height: 100px;
+    position: fixed; /* p ficar fixo no local q inserirmos */
+    right: 0;       /* zeramos a margem direita */
+    text-align: center;  /* alinhado no centro */
+    margin-top: 10%;
+    z-index: 1; /* item fica na camada 1, acima de tudo */
+}
+
+#grid-container{
+    margin-top: 5px;
+    background-color: #ADD8E6;
+    padding: 5px;
+}
+
+.grid{     /* grade */ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    /* Quando usa: repeat(auto-fill, 1fr);
+    auto-fill: observa o espaço disponivel e faz a quebra de coluna
+    minmax: valor minimo e maximo p ver espaço disponivel
+    300px: minimo de 300 pixels
+    1fr: aquilo que nao estiver dentro dos 300 pixels, vai ocupar 1 fragmento, pode chegar ao ponto de ter somente UMA coluna
+    Serve p ficar bem responsivo, assim que vai fechando a pagina, vai virando menos colunas.
+    */
+
+    /*  Quando usa: repeat(2, 1fr);
+    repete 2 colunas fragmentadas, aproveita o espaço da tela e transforma em 2 colunas 
+    */
+
+    /* Quando usa: 1fr, 1fr, 1fr;
+    1fr = 1 fragmento, pega do tamanho da tela, como há três 1fr, vira 3 colunas */
+
+    grid-gap: 1px; /* grades visiveis */
+    max-width: 1200px;
+    /* largura maxima, qnd atingir esse limite, a tela nao ira mais crescer (qnd miniza a tela, estica, etc) */
+    margin: 0 auto; /* a margem fica automatico nas laterais e é centralizada, é algo bem utilizado */ 
+}
+
+.grid div{    /* td na classe grid, porem q esta no div */
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2px;
+}
+
+#formulario{
+    background-color: rgba(173, 216, 230, 1.0);
+}
+
+.formulario-contato{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    padding: 10px;
+    text-align: left;
+    margin-left: 5%; /* vai ficar do lado esquerdo da tela, vai ter uma sepaçao de 5% da tela  */ 
+    font-weight: bold; /* vai ficar td em negrito */ 
+}
+
+input{
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    padding: 5px;
+    border: solid;
+    border-radius: 10px; /* arredonda a borda */
+    margin-left: 3%;
+}
+ /* parte de NOME e contato p ficar maior a caixinha e nao afetar os de selecionar, os "quero saber mais sobre.. etc" */ 
+.dados-formulario{
+    width: 70%;
+}
+
+nav{
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold; /* deixar em negrito */ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem; /* 16 pixels padrao p tamanho */
+    margin-right: 2%;
+    word-spacing: 10px; /* separaçao de uma palavra p outra */
+}
+
+/* formatar link comum */ 
+a{
+    text-decoration: none;   /* n desejamos o traço embaixo do nome, mt usado */
+    color: rgba(255, 255, 255, 1.0);
+    transition: all 300ms ease-in-out;   /* 300ms eh padrao */
+    /* transition: transiçao, ms de qnd passar mouse e mudar cor
+    ease-in-out: entrada e saida */
+}
+
+/* formatar link qnd passar o mouse */ 
+a:hover{
+    color: yellow;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 3%;
+    color: #696969;
+}
+
+.link{
+    background-color: #dcdcdc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    margin-left: 3%;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.resposta{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.0rem;
+    margin-left: 3%;
+    font-weight: bold;   
+}
+
+img{   /* pq a imagem é quadrada */ 
+    width: 80%;
+    height: 80%;
+}
+
+/* so sera atingido qnd houver o atributo 'hover', q eh qnd passa o mouse em cima */
+img:hover{
+    transform: scale(1.2);  /* serve p aumentar a img qnd passa o mouse */
+    border: solid #4169E1;
+    border-radius: 10px;
+}
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale-1.0">
+    <title>Exemplo Férias</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header> <!-- nav de navegação p voltar pra pag inciial -->
+        <nav>
+            <a href="index.html"> << VOLTAR</a>
+        </nav>
+
+        <h3>EXEMPLO DE PÁGINA JAVASCRIPT LTDA</h3>
+        <h4>EXEMPLO DE PÁGINA JAVASCRIPT</h4>
+    </header>
+
+
+    <br><br><br><br><br><br>
+
+    <section class="container">
+        <h2>Férias</h2>
+        <p>De acordo com a lei trabalhista, o funcionário que sai de férias tem o direito de receber a remuneração mensal adiantada mais um adicional, que equivale a um terço do pagamento.</p>
+        <p>O valor total deve ser depositado na conta do funcionário até dois dias antes do início do período de descanso.</p>
+        <h2>Cálculo</h2>
+        <br><br>
+
+
+        <div class="resposta">
+            <!-- calculo das ferias
+            salario+abono1/3 = bruto - imposto = liquido -->
+            <script type="text/javascript">
+                let salario = prompt("Insira o seu atual salário e caso necessário, informe as casas decimais com ponto ao invés de vírgula.");
+                salario = Number(salario);
+                salario = parseFloat(salario.toFixed(2)); /* salario convertido em parseFlaot p nao ficar numero quebrado, casas decimais, valor fixo apos virgula, p nao ter dizima*/
+
+                let abono = salario/3;
+                abono = parseFloat(abono.toFixed(2));  /* apenas 2 carac apos a virgula, float aceita casas decimais */
+
+                let bruto = salario+abono;
+                bruto = parseFloat(bruto.toFixed(2));
+
+                let imposto = bruto/100*9;      /* 9% do valor bruto */
+                imposto = parseFloat(imposto.toFixed(2));
+
+                let liquido = bruto-imposto;
+                liquido = parseFloat(liquido.toFixed(2));
+
+                document.write("Salário Informado: R$ "+salario+"<br />"+"<br />");
+                document.write("Abono de 1/3: R$ "+abono+"<br />"+"<br />");
+                document.write("Valor Bruto de Férias: R$ "+bruto+"<br />"+"<br />");
+                document.write("Valor de Imposto: R$ "+imposto+"<br />"+"<br />");
+                document.write("Valor a Receber: R$ "+liquido+"<br />"+"<br />");
+            </script>
+        </div>
+
+    </section>
+
+   <br><br>
+
+    <footer>
+        <h3>EXEMPLO DE PÁGINA JAVASCRIPT LTDA</h3>
+        <h4>EXEMPLO DE PÁGINA EM JAVASCRIPT</h4>
+        <br>
+        <p class="texto-footer">Contatos:</p>
+        <p class="texto-footer">Email: paola.oda@edu.unipar.br</p>
+        <p class="texto-footer">CNPJ: 00.000.000/0001-00</p>
+    </footer>
+
+
+</body>
+</html>

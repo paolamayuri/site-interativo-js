@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale-1.0">
+    <title>Exemplo JavaScript</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header> <!-- nav de navegação, a href é link -->
+        <nav>
+            <a href="#">INÍCIO</a>
+            <a href="#">FGTS</a>
+            <a href="#">FÉRIAS</a>
+            <a href="#">DÉCIMO</a>
+        </nav>
+
+        <h3>EXEMPLO DE PÁGINA JAVASCRIPT LTDA</h3>
+        <h4>EXEMPLO DE PÁGINA JAVASCRIPT</h4>
+    </header>
+
+<!-- <div class="compre">
+
+    <h5>Compre agora mesmo</h5>
+    <button>COMPRAR</button>
+
+</div> -->
+
+    <br><br><br><br><br><br>
+
+    <section class="container">
+        <h1>EXEMPLO DE PÁGINA JAVASCRIPT</h1>
+                <h2>Cursos de Informática e Tecnologia</h2>
+                <p>Olá!</p>
+                <p>Vamos falar um pouco sobre o conteúdo a seguir.</p>
+                <p>Nesta página vamos abordar um exemplo de site com as tecnologias HTML, CSS e JavaScript.</p>
+                <p>O intuito da página é abordar com exemplos práticos o desenvolvimento de uma aplicação Web com as citadas tecnologias e não trabalhar de fato com departamento pessoal e áreas afins.</p>
+                <p>Em resumo essa página foi criada apenas a título de exemplo para alunos de cursos de desenvolvimento de sites e não deverá ser considerada como base para qualquer tipo de cálculo trabalhista.</p><br>
+        
+    </section>
+
+    <br>
+
+    <section class="container">
+        <h2>FGTS</h2>
+        <p>O que é: O FGTS é uma poupança aberta pela empresa em nome do trabalhador que funciona como uma garantia para protegê-lo em caso de demissão sem justa causa.</p> 
+        <p>Os valores do FGTS pertencem exclusivamente ao trabalhador e, em algumas situações especiais, pode ser sacado sem que o trabalhador tenha deixado o emprego.</p>
+        <h2>Cálculo</h2>
+
+<!-- 
+    label: definir um rotulo p um elemento de texto, tipo caixa de texto
+    input: criar entrada de dados, campo o usuario inserir dados
+    type=number: definir entrada do tipo numerico
+    placeholder: define texto dentro do campo qnd ta vazio
+-->
+
+    <label for="salario">Salário</label><br>
+    <input type="number" id="salario" placeholder="Insira o seu Salário">
+    <br><br>
+
+    <label for="tempo">Tempo Trabalhado (em meses)</label><br>
+    <input type="number" id="tempo" placeholder="Insira o número de Meses">
+    <br><br>
+    <button onclick="fgts()">CALCULAR</button>
+    <br><br>
+
+    <p><b>O valor aproximado de FGTS no período é de: R$<span></span></p></b>
+
+    <script type="text/javascript">
+        /* informaçao q for inserida na caixa de texto salario, ira vir pra essa querySelector
+        'span' = tag vazia */
+        let salario = document.querySelector('#salario');
+        let tempo = document.querySelector('#tempo');
+        let resultado = document.querySelector('span');
+
+        /* calculo do fgts menos 8% = 1000/10*8 
+        ex: tempo de 10 meses, calculo = 80*10 = 100 */
+        function fgts(){
+            resultado.innerHTML = parseFloat(salario.value/100*8)*tempo.value; /*value eh valor dentro da variavel*/
+        }
+
+    </script>
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="container">
+        <h2>Férias</h2>
+        <p>De acordo com a lei trabalhista, o funcionário que sai de férias tem o direito de receber a remuneração mensal adiantada mais um adicional, que equivale a um terço do pagamento.</p>
+        <p>O valor total deve ser depositado na conta do funcionário até dois dias antes do início do período de descanso.</p>
+        <h2>Cálculo</h2>
+        <br><br>
+
+        <!-- colocando link p calculo de ferias -->
+        <a href="ferias.html" class="link">Clique para Calcular Férias</a>
+        <br><br><br>
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="container">
+        <h2>Décimo</h2>
+        <p>O décimo terceiro, também conhecido como gratificação de Natal, foi instituído no país em 1962. O direito ao trabalhador foi implementado no governo João Goulart, por meio da lei nº 4.090/1962.</p>
+        <p>Como o nome sugere, ele é uma remuneração extra, que é paga no fim do ano.</p>
+        <h2>Cálculo</h2>
+        <br><br>
+        <!-- calculo do decimo terceiro -->
+        <a href="decimo.html" class="link">Clique para Calcular o seu Décimo</a>
+        <br><br><br>
+    </section>
+
+    <br>
+    <br>
+
+    <section class="container" id="grid-container">  <!-- ainda faz parte da classe "container" só que identificamos (id) ela como grid-container -->
+        <h3>Clique para saber mais</h3>
+
+        <div class="grid">
+
+            <div>
+                <h2>FGTS</h2>
+                <img src="img/fgts.png" alt="Imagem FGTS"> <!-- alt = eh p caso img n carrega, tem texto -->
+            </div>
+
+            <div>
+                <h2>Férias</h2>
+                <a href="ferias.html"><img src="img/ferias.png" alt="Imagem Férias"></a>
+            </div>
+
+            <div>
+                <h2>Décimo 13°</h2>
+                <a href="decimo.html"><img src="img/decimo.png" alt="Imagem Décimo"></a>
+            </div>
+
+            <div>
+                <h2>Investimentos</h2>
+                <img src="img/investimentos.png" alt="Imagem Investimentos">
+            </div>
+
+            <div>
+                <h2>Renda Extra</h2>
+                <img src="img/renda-extra.png" alt="Imagem Renda Extra">
+            </div>
+
+            <div>
+                <h2>Serviços</h2>
+                <img src="img/servicos.png" alt="Imagem Servicos">
+            </div>
+
+        </div>
+
+    </section>
+
+    <br>
+    <!-- Formulário -->
+    <!-- <section class="container" id="formulario">
+
+        <h2>Selecione um Produto para Mais Informações</h2>
+        
+        <form action="#" method="get" target="_blank"> 
+
+        <p class="formulario-contato">
+
+            <label for="nome">Nome</label><br>
+            <input class="dados-formulario" type="text" id="nome" name="nome" placeholder="Insira seu Nome">
+
+        </p> 
+
+        <p class="formulario-contato">
+
+            <label for="contato">Contato</label><br>
+            <input class="dados-formulario" type="tel" id="tel" name="tel" placeholder="Insira seu Whatsapp">
+
+        </p> 
+
+         checkbox cria uma caixinha p selecionar
+        value: descriçao p pessoa q vai receber o formulario -->
+        <!-- <p class="formulario-contato">
+            <input type="checkbox" id="office" name="office" value="cursos de office">    
+            <label for="office">Quero saber mais sobre Cursos de Pacote Office</label>
+            <br><br>
+
+            <input type="checkbox" id="web" name="web" value="cursos de desenv web">    
+            <label for="web">Quero saber mais sobre Cursos de Desenvolvimento Web</label>
+            <br><br>
+
+            <input type="checkbox" id="marketing" name="marketing" value="cursos de marketing">    
+            <label for="marketing">Quero saber mais sobre Cursos de Marketing Digital</label>
+            <br><br>
+
+        </p>
+
+         Criação de botão de submit(enviar) e reset(limpar)
+        <p class="formulario-contato">
+            <input type="submit" value="ENVIAR">
+            <input type="reset" value="LIMPAR">
+        </p> 
+
+
+        </form> 
+
+        OBSERVAÇÕES:
+        input:
+            type = tipo de texto
+            id= nome
+            nome = p identificar 
+            placegolder = tipo observação        
+            
+        <p class="formulario-contato"> recebe o label, q recebe o input 
+        input type="text" = texto
+        input type="tel" = telefone
+
+    </section> -->
+
+    <br>
+
+    <br> <br>
+
+    <footer>
+        <h3>EXEMPLO DE PÁGINA JAVASCRIPT LTDA</h3>
+        <h4>EXEMPLO DE PÁGINA EM JAVASCRIPT</h4>
+        <br>
+        <p class="texto-footer">Contatos:</p>
+        <p class="texto-footer">Email: paola.oda@edu.unipar.br</p>
+        <p class="texto-footer">CNPJ: 00.000.000/0001-00</p>
+        <br>
+        <p class="texto-footer"><a href="adm.html">Acessar Área Administrativa</a></p>
+        <br>
+    </footer>
+
+
+</body>
+</html>
