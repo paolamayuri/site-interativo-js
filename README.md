@@ -10,3 +10,5 @@ Este código cria uma página web demonstrando o uso de HTML, CSS e JavaScript.
 - Rodapé com informações de contato e links adicionais.
 
 A funcionalidade JavaScript inclui cálculos do FGTS e manipulação de elementos da página com base na interação do usuário.
+
+Link do projeto: https://exemplojavascript3.netlify.app/
